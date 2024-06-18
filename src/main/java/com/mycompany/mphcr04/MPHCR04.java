@@ -65,7 +65,7 @@ public class MPHCR04 {
         JButton addButton = new JButton("Add");
         JButton updateButton = new JButton("Update");
         deleteButton = new JButton("Delete");
-        deleteButton.setEnabled(false); // Initially disabled
+        deleteButton.setEnabled(false);
 
         addButton.addActionListener(new ActionListener() {
             @Override
@@ -170,7 +170,7 @@ public class MPHCR04 {
 
     private int findRowByEmployeeNumber(String employeeNumber) {
         for (int i = 0; i < tableModel.getRowCount(); i++) {
-            if (employeeNumber.equals(tableModel.getValueAt(i, 0))) { // Assuming Employee # is in the first column
+            if (employeeNumber.equals(tableModel.getValueAt(i, 0))) {
                 return i;
             }
         }
